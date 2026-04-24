@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            margin: 10px;
+            background-color: rgb(221, 252, 252);
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            margin-left: 380px;
+            padding: 20px;
+            background-color: rgb(225, 220, 214);
+            border-radius: 10px;
+           
+            text-align: left;
+            width: 500px;
+        }
+        h2{
+            text-align: center;
+            margin-top: 0%;
+        }
+        label{
+            text-align: left;
+            margin-left: 20px;
+        }
+        input{
+            margin-left: 10px;
+        }
+        button{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Students Registration Form</h1>
+    <form>
+        <h2>Apply Here</h2>
+        <label>Student Name :</label>
+        <input type="text" placeholder="FirstName" required>
+        <input type="text" placeholder="LastName" required>
+        <br><br>
+        <label>Parents Name:</label>
+        <input type="text" placeholder="enter Parents name" required>
+        <br><br>
+        <label>Email :</label>
+        <input type="email" placeholder="Enter your Email id" required>
+        <br><br>
+        <label>Mobile Number:</label>
+        <input type="text" placeholder="phone num" required>
+        <input type="text" placeholder="Alternate num" required>
+        <br><br>
+        <label>Date Of Birth:</label>
+        <input type="date" required>
+        <br><br>
+        <label>City:</label>
+        <input type="text" placeholder="enter city" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="Gender">Male
+        <input type="radio" name="Gender">Female
+        <br><br>
+        <label>Address:</label>
+        <textarea type="text" placeholder="enter your address" rows="2" cols="10"></textarea>
+        <br><br>
+        <label>Courses:</label>
+        <select>
+            <option>Select</option>
+            <option>M.P.C</option>
+            <option>Bi.P.c</option>
+            <option>M.E.C</option>
+            <option>C.E.C</option>
+            <option>H.E.C</option>
+        </select>
+        <br><br>
+        <label>Campus</label>
+        <input type="checkbox">A/C Campus
+        <input type="checkbox">NON-A/C Campus
+        <input type="checkbox">Day's scholar
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
