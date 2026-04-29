@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google gemini A.I Page</title>
+    <style>
+        body{
+            margin: 5px;
+            background-color: white;
+        }
+        header{
+            background-color: #003366;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo{
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 18px;
+        }
+        nav a:hover{
+            text-decoration: underline;
+        }
+        .section1{
+            margin: 0px;
+            display: block;
+        }
+        .content{
+            color: white;
+            height: 65vh;
+            display:block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80) center / cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content h1{
+            margin-bottom: 15px;
+            color: white;
+            font-size: 40px;
+        }
+        .content p{
+            font-size: 18px;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        .content button{
+            padding: 12px 25px;
+            background: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #section2{
+            margin: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 3rem 5%;
+            margin-bottom: 2rem;  
+        }
+        #section2 h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        #section3{
+            width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        #section3 h2{
+            font-size: 45px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .cards{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+        .card{
+            width: 300px;
+            background: white;
+            overflow: hidden;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .card .color1{
+            height: 120px;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+        }
+        .card .color2{
+            height: 120px;
+            background: linear-gradient(45deg, #4E65FF, #92EFFD);
+        }
+        .card .color3{
+            height: 120px;
+            background: linear-gradient(45deg, #11998E, #38EF7D);
+        }
+        .cardcontent{
+            padding: 20px;
+        }
+        .cardcontent h3{
+            margin-bottom: 10px;
+            color: black;
+
+        }
+        .cardcontent p{
+            font-size: 14px;
+            color: black;
+            line-height: 1.5;
+        }
+        .cardcontent a{
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cardcontent a:hover{
+            text-decoration: underline;
+        }
+        footer{
+            background: black;
+            color: white;
+            padding: 40px 60px;
+        }
+        .contenttop{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .top h3{
+            color: white;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .top1 a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .top1 a:hover{
+            text-decoration: underline;
+        }
+        footer hr{
+            border: 0;
+            border-top: 1px solid white;
+            margin: 20px 0;
+        }
+        .buttom{
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Horizan University</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Acadamics</a>
+            <a href="#">Admissions</a>
+            <a href="#">Compus Life</a>
+        </nav>
+    </header>
+    <section class="seection1">
+        <div class="content">
+            <h1>Empowering Your Future</h1>
+            <p>
+                Discover a world-class education designed to innovate, inspire, and
+                 elevate your career to the next level.
+            </p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="para">
+            <h2>50+</h2>
+            <p>Undergraduate Programs</p>
+        </div>
+        <div class="para">
+            <h2>15:1</h2>
+            <p>Student-to-Faculty Ratio</p>
+
+        </div>
+        <div class="para">
+            <h2>95%</h2>
+            <p>Graduate Employment</p>
+        </div>
+        <div class="para">
+            <h2>120+</h2>
+            <p>Student Clubs & Organizations</p>
+        </div>
+    </section>
+    <section id="section3">
+        <h2>Featured Departments</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="color1"></div>
+                <div class="cardcontent">
+                    <h3>College of Engineering</h3>
+                    <p>
+                        Build the future with our cutting-edge labs and industry-experienced faculty.
+                         Programs in Mechanical, Civil, and Computer Engineering.
+                    </p>
+                    <a href="#">Learn More &#8594;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="color2"></div>
+                <div class="cardcontent">
+                    <h3>School of Business</h3>
+                    <p>
+                        Develop leadership and entrepreneurial skills to thrive in the global marketplace. 
+                        AACSB-accredited programs.
+                    </p>
+                    <a href="#">Learn More &#8594;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="color3"></div>
+                <div class="cardcontent">
+                    <h3>Arts & Sciences</h3>
+                    <p>
+                       Explore your passions with diverse programs in Humanities, Biological Sciences,
+                        and Digital Arts.
+                    </p>
+                    <a href="#">Learn More &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="contenttop">
+            <div class="top1">
+                <h3>Horizon University</h3>
+                <p>123 University Blvd.</p>
+                <p>Innovation City, ST 12345</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="top1">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Financial Aid</a>
+                <a href="#">Studentprotal</a>
+                <a href="#">Alumni</a>
+            </div>
+            <div class="top1">
+                <h3>Resources</h3>
+                <a href="#">Library</a>
+                <a href="#">Campus Map</a>
+                <a href="#">Career Center</a>
+                <a href="#">Athletics</a>
+            </div>      
+        </div>
+        <hr>
+        <div class="buttom">
+            &copy; 2026 Horizon University. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
