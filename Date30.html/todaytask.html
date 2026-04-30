@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini A.i Gita Universty Page</title>
+    <style>
+        body{
+            margin: 5px;
+            background-color: white;
+        }
+        header{
+            width: 90%;
+            background-color: #08142b;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 42px;
+            gap: 10px;
+            position: fixed;
+            margin-bottom: 20px;
+        }   
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        } 
+        .logobox{
+            width: 32px;
+            height: 32px;
+            background: #3b82f6;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .logo h2{
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 18px;
+        }
+        nav a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+        button{
+            padding: 10px;
+            border-radius: 25px;
+            background: blue;
+            color: white;
+        }
+        .hero{
+            height: 70vh;
+            padding: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(#08152c,#121f38);
+            margin-top: 10px;
+        }
+        .heroleft{
+            width: 50%;
+        }
+        .heading{
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgb(5, 5, 82);
+            color: rgb(49, 101, 184);
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        .heroleft h1{
+            font-size: 50px;
+            line-height: 1.2;
+            margin-bottom: 28px;
+            color: white;
+        }
+        .heroleft h1 span{
+            color: blue;
+        }
+        .heroleft p{
+            color: white;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+        .herobuttons{
+            display: flex;
+            gap: 20px;
+        }
+        .firstbutton{
+            background: white;
+            color:black;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .secoundbutton{
+            background: transparent;
+            color: white;
+            border-radius: 1px solid rgba(255,255,255,0.25);
+        }
+        .heroright{
+            width: 48px;
+            display: grid;
+            grid-template-columns: 2 1fr;
+            gap: 15px;
+            position: relative;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: 2 ifr;
+        }
+        .card{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .section1{
+            width: 100%;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            
+        }
+        .statcard{
+            padding: 20px;
+            background: white;
+            border: 1px solid rgb(3, 3, 3);
+            border-radius: 10px;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+
+        }
+        .statcard:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+        }
+        .statnum{
+            color: rgb(21, 58, 243);
+            font-size: 35px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+            padding: auto;
+        }
+        .statcontent{
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .compartment{
+            width: 100%;
+            margin: auto;
+            padding: 70px 20px 90px;
+        }
+        .headtop{
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .headtop h1{
+            font-size: 50px;
+            color: black;
+            margin-bottom: 18px;
+        }
+        .headtop p{
+            width: 600px;
+            margin: auto;
+            color: black;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .comp-cards{
+            width: 500px;
+            height: 300px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .comp-card{
+            background: white;
+            border: 1px soild white;
+            border-radius: white;
+            padding: 30px;
+            transition: 0.3s ease;
+        }
+        .comp-card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logobox">G</div>
+            <h2>GITA UNIVERSITY</h2>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#acadamics">Acadamics</a>
+            <a href="#campus">Campus</a>
+            <a href="#admissions">Admissions</a>
+        </nav>
+        <button>Apply Now</button>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <div class="heroleft">
+                <div class="heading">
+                    Innovation • Excellence • Impact
+                </div>
+                <h1>
+                    Design Your Future <br>
+                    in <span>Global Excellence</span>
+                </h1>
+                <p>
+                    Immerse yourself in a landscape of architectural beauty 
+                    and cutting-edge research. Join a community of scholars 
+                    dedicated to solving world-class challenges.
+                </p>
+                <div class="herobuttons">
+                    <button class="firstbutton">Explore Programs</button>
+                    <button class="secoundbutton">Virtual campus Tour</button>
+                </div>
+            </div>
+        </div>
+        <div class="heroright">
+            <div class="cards">
+                <div class="card">
+                    <img src="https://fl-i.thgim.com/public/newsletter/reading-with-frontline/93dggy/article69771627.ece/alternates/LANDSCAPE_660/SIO%20Library.jpg" width="200px">
+                </div>
+                <div class="card">
+                    <img src="" alt="Acadamy Building architecture">
+                </div>
+                <div class="card">
+                    <img src="" alt="Student studing Library">
+                </div>
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/028/217/451/small/abstract-rhombus-patterned-light-brown-natural-wood-veneer-panel-photo.jpg" width="200px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section1">
+        <div class="statcard">
+            <div class="statnum">#12</div>
+            <div class="statcontent">National Ranking</div>
+        </div>
+         <div class="statcard">
+            <div class="statnum">25+</div>
+            <div class="statcontent">Research Centers</div>
+        </div>
+         <div class="statcard">
+            <div class="statnum">98%</div>
+            <div class="statcontent">Graduate Placement</div>
+        </div>
+         <div class="statcard">
+            <div class="statnum">$12M</div>
+            <div class="statcontent">Scholarship Fund</div>
+        </div>
+    </section>
+    <section class="compartment">
+        <div class="headtop">
+            <h1>Academic Departments</h1>
+            <p>
+                Pioneering disciplines that define the next generation 
+                of global industry and art.
+            </p>
+        </div>
+        <div class="comp-cards">
+            <div class="comp-card">
+                <div class="icon"></div>
+                <h2>School of Design</h2>
+                <p>
+                    Where architectural theory meets sustainable urban planning and modern aesthetics.
+                </p>
+                <a href="#" class="link">Explore Degrees &#8594;</a>
+            </div>
+      
+            <div class="comp-card">
+                <div class="icon"></div>
+                <h2>Engineering & AI</h2>
+                <p>
+                    Leading the charge in robotic systems, neural networks, and advanced computation.
+                </p>
+                <a href="#" class="link">Explore Degrees &#8594;</a>
+            </div>
+           <div class="comp-card">
+            <div class="icon"></div>
+                <h2></h2>
+                <p>
+                    Innovative research in genetics, biotechnology, and environmental protection.
+                </p>
+                <a href="#" class="link">Explore Degrees &#8594;</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
