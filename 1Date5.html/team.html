@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet "
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: white;
+      }
+
+      header {
+        position: relative;
+        top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        z-index: 1000;
+      }
+
+      .logo {
+        color: white;
+        font-size: 30px;
+      }
+
+      nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .social a:hover {
+        background: rgb(199, 11, 159);
+        transform: scale(1.1);
+      }
+      .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: -50px auto;
+        height: 600px;
+      }
+
+      .image-top,
+      .image-buttom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-buttom {
+        opacity: 0.7;
+      }
+      .image-container h1 {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        font-size: 60px;
+        color: white;
+      }
+
+      .fixedbox {
+        position: fixed;
+        right: 30px;
+        top: 50px;
+        transform: translateY(350px);
+        background: white;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .btn {
+        position: fixed;
+        right: 30px;
+        top: 50px;
+        transform: translateY(400px);
+        margin-top: 10px;
+        background: rgb(250, 13, 0);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #history1-sec {
+        background: rgb(231, 219, 228);
+        margin: 25px;
+      }
+      .history-1 {
+        margin: 10px;
+        background: rgb(254, 171, 231);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+      }
+      .history1-content {
+        max-width: 500px;
+        text-align: center;
+      }
+      .history1-content h2 {
+        font-size: 60px;
+
+        color: black;
+      }
+      .history1-content p {
+        font-size: 18px;
+        margin: 20px 30px;
+        color: black;
+      }
+
+      .history1-img img {
+        width: 400px;
+      }
+      #history2-sec {
+        background: rgb(231, 219, 228);
+      }
+      .history-2 {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+      }
+      .history2-content {
+        max-width: 500px;
+        text-align: center;
+      }
+      .history2-content h2 {
+        font-size: 60px;
+
+        color: black;
+      }
+      .history2-content p {
+        font-size: 18px;
+        margin: 20px 30px;
+        color: black;
+      }
+
+      .history2-img img {
+        width: 400px;
+      }
+      .footer {
+        position: relative;
+        background: url("https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg")
+          center/cover no-repeat;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      .footer-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-logo {
+        font-family: "Playfair Display";
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      .footer-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+        color: rgb(61, 61, 61);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+      }
+
+      .footer-social a:hover {
+        background: rgb(190, 14, 123);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Bridge</div>
+
+      <nav>
+        <a href="megatask.html">HOME</a>
+        <a href="team.html">TEAM</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </header>
+    <div class="image-container">
+      <img
+        src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg"
+        width="100%"
+        class="image-bottom"
+        alt="Image 2"
+      />
+      <h1>Our team</h1>
+    </div>
+    <div class="fixedbox">
+      <p>
+        <b>630+</b>Bridge<br />
+        demos
+      </p>
+    </div>
+    <button class="btn">BuyNow $69</button>
+    <section id="history1-sec">
+      <div class="history-1">
+        <div class="history1-content">
+          <h2>History of manufacturer</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis nostrud exercitation
+          </p>
+          <button>READ ALL</button>
+        </div>
+        <div class="history1-img">
+          <img
+            src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-1.png "
+            alt="" width="200px"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="history2-sec">
+      <div class="history-2">
+        <div class="history2-img">
+          <img
+            src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-2.png  "
+            alt="" width="300px"
+          />
+        </div>
+        <div class="history2-content">
+          <h2>History of manufacturer</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis nostrud exercitation
+          </p>
+          <button>READ ALL</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-overlay"></div>
+
+      <div class="footer-content">
+        <h2 class="footer-logo">bridgé</h2>
+
+        <p class="footer-text">
+          © Copyright Qode Interactive - All Rights Reserved <br />
+          Proudly Made For You.
+        </p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
