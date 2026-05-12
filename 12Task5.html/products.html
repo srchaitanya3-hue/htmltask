@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(243, 243, 243);
+            color: black;
+        }
+
+        marquee {
+            position: fixed;
+            top: 0;
+            background: rgb(61, 229, 61);
+            color: white;
+            width: 100%;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background: wheat;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+            margin-top: 50px;
+        }
+
+        .navbar {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(61, 229, 61);
+        }
+
+        nav ul {
+            margin-left: 200px;
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(2, 157, 28);
+            text-decoration: underline;
+        }
+
+        .btn1 {
+            margin-left: 450px;
+            padding: 10px 20px;
+            background: rgb(61, 229, 61);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn1:hover {
+            background: rgb(16, 21, 176);
+        }
+
+        .btn2 {
+            padding: 10px 20px;
+            background: rgb(61, 229, 61);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn2:hover {
+            background: rgb(16, 21, 176);
+        }
+
+        .hero {
+            width: 100%;
+            height: 90vh;
+            background: url("https://www.ibef.org/discoverindia/organic-products/organic_images/io-bottom-img.jpg")center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            width: 90%;
+            margin: auto;
+            color: white;
+        }
+
+        .hero-content h4 {
+            margin-top: 60px;
+            color: rgb(255, 248, 243);
+            font-size: 25px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .hero-content h1 {
+            color: whitesmoke;
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            line-height: 85px;
+        }
+
+        .hero-content p {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            width: 50%;
+            font-weight: 500;
+            margin-bottom: 80px;
+        }
+
+        .btn3 {
+            margin-top: auto;
+            padding: 10px 20px;
+            background: rgb(61, 229, 61);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn3:hover {
+            background: rgb(16, 21, 176);
+        }
+        .products {
+            width: 90%;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .products h1 {
+            text-align: center;
+            margin-bottom: 60px;
+            color: rgb(61, 229, 61);
+        }
+        .products-lists h2 {
+            margin-bottom: 30px;
+            color: rgb(61, 229, 61);
+        }
+        .products-lists1 h2 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: rgb(61, 229, 61);
+        }
+        .products-items {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+        .product-item {
+            width: 250px;
+            background: rgb(247, 239, 239);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+        .product-item h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: rgb(61, 229, 61);
+        }
+        .price-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .new-price {
+            color: rgb(61, 229, 61);
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .old-price {
+            color: rgb(153, 153, 153);
+            text-decoration: line-through;
+            font-size: 16px;
+        }
+        .product-item button {
+            padding: 10px 20px;
+            background: rgb(61, 229, 61);
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .product-item button:hover {
+            background: rgb(16, 21, 176);
+        }
+        .best-selling {
+            width: 90%;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee behavior="scroll" direction="left">
+        * Free Delivery across all india|&nbsp;&nbsp;&nbsp;
+        * 100% Organic Products|&nbsp;&nbsp;&nbsp;
+        * 24/7 Customer Support|&nbsp;&nbsp;&nbsp;
+        * Easy Returns and Refunds|&nbsp;&nbsp;&nbsp;
+        * Secure Payment Options|&nbsp;&nbsp;&nbsp;
+        * Exclusive Discounts and Offers|&nbsp;&nbsp;&nbsp;
+        * Freshness Guaranteed|&nbsp;&nbsp;&nbsp;
+    </marquee>
+    <header>
+        <div class="navbar">
+            <div class="logo">Organic</div>
+            <nav>
+                <ul>
+                    <li><a href="organic.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button type="submit" class="btn1">sign in</button>
+            <button type="submit" class="btn2">login</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h4>FRESH & ORGANIC </h4>
+            <h1>Vegetables<br>100% Natural & Organic</h1>
+            <p>Free Pickup amd Delivery Avaliable</p>
+            <button type="submit" class="btn3">Shop Now</button>
+        </div>
+    </section>
+    <section class="products">
+        <h1>Our Oganic Products</h1>
+        <div class="products-lists">
+            <h2>Vegtables</h2>
+            <div class="products-items">
+                <div class="product-item">
+                    <img src="https://frugivore-bucket.s3.amazonaws.com/media/package/img_one/2021-02-24/Tomato.jpg"
+                        alt="">
+                    <h3>Tomato</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹40</span>
+                        <span class="old-price">₹50</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://www.greendna.in/cdn/shop/products/cucumber_1_700x.jpg?v=1594219681" alt="">
+                    <h3>Cucumber</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹25</span>
+                        <span class="old-price">₹40</span>
+                    </div>
+                    <button>Buy Now</button>  
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/51T6ABtzOxL._AC_UF894,1000_QL80_.jpg" alt="">
+                    <h3>Potato</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹40</span>
+                        <span class="old-price">₹65</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://5.imimg.com/data5/IY/KE/MY-17706234/salad-onions-500x500.jpg" alt="">
+                    <h3>onion</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹30</span>
+                        <span class="old-price">₹50</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://tiimg.tistatic.com/fp/1/007/119/healthy-natural-organic-fresh-carrot-191.jpg"
+                        alt="">
+                    <h3>carrot</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹80</span>
+                        <span class="old-price">₹99</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="products-lists1">
+            <h2>Fruits</h2>
+            <div class="products-items">
+                <div class="product-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTw6bxiXPMvFmDLeANdWhP94MQLk6GuWbHNQ&s"alt="">
+                    <h3>Apple</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹40</span>
+                        <span class="old-price">₹50</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKnkNlQBZCvK2VPUP0A9WnCx58oCFxanEvJQ&s" alt="">
+                    <h3>Banana</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹25</span>
+                        <span class="old-price">₹40</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGCYF7JEDHwNd7gQoXivehuVYL1nMcujcL8A&s" alt="">
+                    <h3>Strawberry</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹40</span>
+                        <span class="old-price">₹65</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://5.imimg.com/data5/KE/XH/MY-15096561/organic-indian-gooseberry-aamla-500x500.jpg" alt="">
+                    <h3>Gooseberry</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹30</span>
+                        <span class="old-price">₹50</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://tiimg.tistatic.com/fp/1/007/383/a-grade-100-pure-fresh-organic-healthy-mango-fruits-479.jpg"
+                        alt="">
+                    <h3>Mango</h3>
+                    <div class="price-row">
+                        <span class="new-price">₹80</span>
+                        <span class="old-price">₹99</span>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
