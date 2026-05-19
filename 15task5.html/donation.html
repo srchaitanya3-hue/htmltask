@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: rgb(231, 230, 230);
+        }
+
+        marquee {
+            position: fixed;
+            top: 0px;
+            background: rgb(2, 42, 162);
+            color: white;
+            width: 100%;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 50px;
+            background: rgb(0, 56, 185);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-left,
+        .logo-right {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            background: white;
+            padding: 5px;
+        }
+
+        .logo-left {
+            left: 180px;
+        }
+
+        .logo-right {
+            right: 180px;
+        }
+
+        .logo-left img,
+        .logo-right img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        nav {
+            position: fixed;
+            top: 170px;
+            width: 100%;
+            background: rgb(2, 42, 162);
+
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 18px 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu li a:hover {
+            background: #0074c2;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            list-style: none;
+
+        }
+
+        .dropdown-menu li a {
+            color: black;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+         .donation-section{
+            width:90%;
+            max-width:1200px;
+            margin:250px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:40px;
+
+        }
+
+        .donation-info,
+        .donation-form{
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .donation-info h2,
+        .donation-form h2{
+            font-size:32px;
+            color:#b36b00;
+            margin-bottom:20px;
+        }
+
+        .donation-info p{
+            line-height:1.8;
+            margin-bottom:15px;
+        }
+
+        .features{
+            margin-top:20px;
+        }
+
+        .features li{
+            margin-bottom:12px;
+            list-style:none;
+            padding-left:25px;
+            position:relative;
+        }
+
+        
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        input,
+        select,
+        textarea{
+            width:100%;
+            padding:14px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            font-size:16px;
+            outline:none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            border-color:#b36b00;
+        }
+
+        .amount-buttons{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+
+        .amount-buttons button{
+            padding:12px 20px;
+            border:none;
+            background:#f0e2c2;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        .amount-buttons button:hover{
+            background:#b36b00;
+            color:white;
+        }
+
+        .donate-btn{
+            background:#b36b00;
+            color:white;
+            border:none;
+            padding:15px;
+            border-radius:10px;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .donate-btn:hover{
+            background:#8d5200;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <marquee behavior="scroll" direction="left">
+        * !! Jai Shri Hari Vitthal !! |&nbsp;&nbsp;&nbsp;
+        * Welcome To Shri Vitthal Temple Online Services|&nbsp;&nbsp;&nbsp;
+        * Book Pooja|&nbsp;&nbsp;&nbsp;
+        * Donate|&nbsp;&nbsp;&nbsp;
+        *Darshan|&nbsp;&nbsp;&nbsp;
+        * Temple Events|&nbsp;&nbsp;&nbsp;
+        * !! Jai Shri Hari Vitthal !! |&nbsp;&nbsp;&nbsp;
+    </marquee>
+    <header>
+        <div class="logo-left">
+            <img src="https://vitthalrukminimandir.org/images/logo-bg.png">
+        </div>
+
+        <h1>Shri Vitthal Rukmini Mandir Samiti</h1>
+        <p>Online Services</p>
+        <div class="logo-right">
+            <img src="https://vitthalrukminimandir.org/images/logo-bg.png">
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="temple.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Darshan &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Sparsha Darshan</a></li>
+                    <li><a href="#">Mukha Darshan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pooja &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tulasipooja.html">Tulasi Archan Pooja</a></li>
+                    <li><a href="abishekam.html">Abhishekam</a></li>
+                    <li><a href="#">Padya Pooja</a></li>
+                    <li><a href="#">Chandan Uti Pooja</a></li>
+                    <li><a href="#">Maha Nivedya</a></li>
+                </ul>
+            </li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="#">Accommodation</a></li>
+            <li><a href="events.html">Events</a></li>
+             <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+    <section class="donation-section">
+
+        <div class="donation-info">
+            <h2>Why Donate?</h2>
+            <p>
+                Your contribution helps maintain temple traditions, organize festivals, support charitable activities, and provide prasadam to devotees.
+            </p>
+
+            <p>
+                Every donation is a sacred offering that supports spiritual growth and community welfare.
+            </p>
+
+            <ul class="features">
+                <li>Daily Temple Poojas</li>
+                <li>Annadanam Services</li>
+                <li>Festival Celebrations</li>
+                <li>Temple Maintenance</li>
+                <li>Support for Devotees</li>
+            </ul>
+        </div>
+
+        <div class="donation-form">
+            <h2>Donate Now</h2>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number" required>
+
+                <select required>
+                    <option value="">Select Donation Purpose</option>
+                    <option>Annadanam</option>
+                    <option>Temple Development</option>
+                    <option>Daily Pooja</option>
+                    <option>Festival Donation</option>
+                </select>
+
+                <div class="amount-buttons">
+                    <button type="button">₹101</button>
+                    <button type="button">₹501</button>
+                    <button type="button">₹1001</button>
+                    <button type="button">₹5001</button>
+                </div>
+
+                <input type="number" placeholder="Custom Amount (₹)">
+
+                <textarea rows="4" placeholder="Your Message"></textarea>
+
+                <button class="donate-btn" type="submit">Donate Securely</button>
+            </form>
+        </div>
+
+    </section>
+ 
+
+</body>
+</html>

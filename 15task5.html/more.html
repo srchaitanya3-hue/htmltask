@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maharashtra Temple Darshan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            width: 100%;
+            background: linear-gradient(to right, #8b0000, #ff6600);
+            padding: 25px;
+            text-align: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            position: fixed;
+            top: 90px;
+            width: 100%;
+            background: rgb(2, 42, 162);
+            z-index: 1000;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 18px 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu li a:hover {
+            background: #0074c2;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            list-style: none;
+            z-index: 1000;
+        }
+
+        .dropdown-menu li a {
+            color: black;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .temple-section {
+            width: 90%;
+            margin: 50px auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .temple-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+        }
+
+
+        .slider {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .slides {
+            width: 500%;
+            height: 100%;
+            display: flex;
+            animation: slide 20s infinite;
+            transform: translateX(5%);
+        }
+
+        .slides img {
+            width: 20%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slides img:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-20%);
+            }
+
+            40% {
+                transform: translateX(-20%);
+            }
+
+            45% {
+                transform: translateX(-40%);
+            }
+
+            60% {
+                transform: translateX(-40%);
+            }
+
+            65% {
+                transform: translateX(-60%);
+            }
+
+            80% {
+                transform: translateX(-60%);
+            }
+
+            85% {
+                transform: translateX(-80%);
+            }
+
+            100% {
+                transform: translateX(-80%);
+            }
+        }
+
+        .content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .content h2 {
+            font-size: 35px;
+            color: #b22222;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Maharashtra Temple Darshan</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="temple.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Darshan &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="sparshadarshan.html">Sparsha Darshan</a></li>
+                    <li><a href="darshan.html">Mukha Darshan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pooja &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tulasipooja.html">Tulasi Archan Pooja</a></li>
+                    <li><a href="abishekam.html">Abhishekam</a></li>
+                    <li><a href="#">Padya Pooja</a></li>
+                    <li><a href="#">Chandan Uti Pooja</a></li>
+                    <li><a href="#">Maha Nivedya</a></li>
+                </ul>
+            </li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+    <section class="temple-section">
+        <div class="temple-container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://www.trawell.in/admin/images/upload/499589499tuljapur-temple.jpg">
+                    <img src="https://www.tirthayatra.org/wp-content/uploads/2022/05/Tuljapur_Bhavani-Devi.jpg">
+                    <img
+                        src="https://www.alamy.com/sri-tuljabhavan-temple-in-tuljapur-maharashtra-india-image632672026.html">
+                    <img src="https://i.ytimg.com/vi/uXirhCuooFg/sddefault.jpg">
+                    <img
+                        src="https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format=webp,w=720/QwRY54Li1HMwD7oNfq1vxQ5hXpO7BwOmE1V8ZzmngR">
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Tulja Bhavani Temple</h2>
+                <p>
+                    Tulja Bhavani Temple is one of the most famous temples in Maharashtra.
+                    It is located in Tuljapur and dedicated to Goddess Bhavani.
+                    Devotees from all over India visit this holy temple to seek blessings.
+                    The temple is known for its ancient architecture, spiritual atmosphere,
+                    and rich history connected with Chhatrapati Shivaji Maharaj.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="temple-section">
+        <div class="temple-container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://saishishirtours.in/wp-content/uploads/2024/05/shani-shingnapur-.webp">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz7slVUomRepzG9izUSpUlX3RHfpHRsYRPNw&s">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/18/75/07/49/360_F_1875074952_4Oamh9kDX32uKlFtjWemS6cKzWYMvzsj.jpg">
+                    <img
+                        src="https://www.sriramwallpapers.com/god-images/temple/shani-shingnapur-wallpapers/thumb/shani-dev-aarti.jpg">
+                    <img
+                        src="https://www.sriramwallpapers.com/god-images/temple/shani-shingnapur-wallpapers/thumb/shanidev.jpg">
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Shani Shingnapur</h2>
+                <p>
+                    Shani Shingnapur Temple is dedicated to Lord Shani.
+                    The village is famous because many houses do not have doors,
+                    as people believe Lord Shani protects them from theft.
+                    Thousands of devotees visit every Saturday to offer prayers
+                    and seek protection from negative effects of Shani.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="temple-section">
+        <div class="temple-container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img
+                        src="https://hblimg.mmtcdn.com/content/hubble/img/additionalttdimages/mmt/activities/m_Shree_Siddhivinayak_Temple_Mumbai_1_l_428_640.jpg">
+                    <img
+                        src="https://static2.tripoto.com/media/filter/tst/img/2185526/TripDocument/1636360536_siddhivinayak_ganpati.jpg">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcRfcSsR9S_zLzbhu7zIKsWsjjtpPFY6cbbA&s">
+                    <img
+                        src="https://blog.yatradham.org/wp-content/uploads/2021/09/Shri-Siddivinayak-Temple-Mumbai.jpg">
+                    <img
+                        src="https://sanatanajourney.com/wp-content/uploads/2025/03/Siddhivinayak-Temple-Mumbai-Mobile-1024x1024.jpg">
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Siddhivinayak Temple</h2>
+                <p>
+                    Siddhivinayak Temple in Mumbai is one of the richest and most visited
+                    Ganesh temples in India. Devotees believe Lord Ganesha fulfills wishes
+                    and removes obstacles. Celebrities, politicians, and devotees from
+                    different parts of the country visit this temple regularly.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="temple-section">
+        <div class="temple-container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img
+                        src="https://i.ytimg.com/vi/nYp43cRrdBg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDL75OhsGrY-fVuCFTIhfjV0qDSNA">
+                    <imd
+                        src="https://chalbanjare.com/crmnew/img_master/package/TrimbakeshwarJyotirlingMandir_17722617000.webp">
+                        <img src="https://www.shivkhori.in/wp-content/uploads/2025/08/Trimbakeshwar-1024x1024.webp">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQZ2g1QBKPXeW8B0Hr8weqnXG7uIUUNUb-A&s">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqV2d-OMEi8wAGjrIrJw8cRBQ8OW6x-ffuw&s">
+
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Trimbakeshwar Temple</h2>
+                <p>
+                    Trimbakeshwar Temple is one of the twelve Jyotirlingas of Lord Shiva.
+                    It is located near Nashik and is famous for its spiritual importance.
+                    The temple architecture is beautiful and attracts pilgrims throughout
+                    the year. The holy Godavari River also originates near this temple.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="temple-section">
+        <div class="temple-container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://www.tirthyatraindia.com/assets/images/12-jyotirling/grishneshwar-mahadev.webp">
+                    <img
+                        src="https://www.artofliving.org/in-en/mahashivratri/app/uploads-shivratri/2023/12/Grishneswar-Jyotirlinga-Ellora.jpeg">
+                    <img src="https://www.fento.in/assets/image2-DPImee_G.png">
+                    <img src="https://shalinicabs.com/wp-content/uploads/2022/06/Grishneshwar_temple6-696x522-1.jpg">
+                    <img src="https://tripnetra.com/blog/wp-content/uploads/2018/08/Grishneshwar-Temple6.jpg">
+
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Grishneshwar Temple</h2>
+                <p>
+                    Grishneshwar Temple is another sacred Jyotirlinga temple located near
+                    Ellora Caves in Maharashtra. The temple is dedicated to Lord Shiva
+                    and is known for its ancient carvings and peaceful environment.
+                    Devotees visit this temple to experience divine blessings and spirituality.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

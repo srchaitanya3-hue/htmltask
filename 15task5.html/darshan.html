@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: rgb(231, 230, 230);
+        }
+
+        marquee {
+            position: fixed;
+            top: 0px;
+            background: rgb(2, 42, 162);
+            color: white;
+            width: 100%;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 50px;
+            background: rgb(0, 56, 185);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-left,
+        .logo-right {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            background: white;
+            padding: 5px;
+        }
+
+        .logo-left {
+            left: 180px;
+        }
+
+        .logo-right {
+            right: 180px;
+        }
+
+        .logo-left img,
+        .logo-right img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        nav {
+            position: fixed;
+            top: 170px;
+            width: 100%;
+            background: rgb(2, 42, 162);
+
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 18px 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu li a:hover {
+            background: #0074c2;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            list-style: none;
+
+        }
+
+        .dropdown-menu li a {
+            color: black;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .instructions-section {
+            background: #fff;
+            margin: 250px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .instructions-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #1d3557;
+        }
+
+        .instructions-section span {
+            color: #444;
+        }
+
+        .language-option {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 25px;
+        }
+
+        .language-option label {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .language-option input {
+            margin-right: 10px;
+            transform: scale(1.3);
+        }
+
+        .instructions-list {
+            padding-left: 30px;
+        }
+
+        .instructions-list li {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .darshan-section {
+            background: #fff;
+            margin: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .darshan-section h2 {
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #1d3557;
+        }
+
+        .darshan-form {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .form-group label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 14px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #1a11c7;
+        }
+
+        /* PRIMARY PILGRIM SECTION */
+
+        .pilgrim-section {
+            background: #fff;
+            margin: 20px;
+            padding: 30px;
+
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .pilgrim-section h2 {
+            font-size: 34px;
+            color: #1d3557;
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+
+        .checkbox-group {
+            margin-bottom: 30px;
+        }
+
+        .checkbox-group label {
+            font-size: 22px;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        /* FORM ROW */
+
+        .form-row {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .form-group label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* INPUTS */
+
+        .form-group input,
+        .form-group textarea,
+        .country-code {
+            padding: 14px;
+            font-size: 18px;
+
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .country-code:focus {
+            border-color: #0077b6;
+        }
+
+        /* SMALL TEXT */
+
+        .form-group small {
+            margin-top: 8px;
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* MOBILE BOX */
+
+        .mobile-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .country-code {
+            width: 100px;
+        }
+
+        /* ADDRESS */
+
+        .address-box {
+            margin-top: 30px;
+        }
+
+        /* TERMS */
+
+        .terms-box {
+            margin-top: 30px;
+        }
+
+        .terms-box label {
+            font-size: 20px;
+        }
+
+        .terms-box input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .terms-box a {
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* BUTTONS */
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+
+            margin-top: 40px;
+        }
+
+        .button-group button {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 6px;
+
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .clear-btn {
+            background: #ccc;
+        }
+
+        .submit-btn {
+            background: #d8891c;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #003f6b;
+            color: white;
+
+            padding: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee behavior="scroll" direction="left">
+        * !! Jai Shri Hari Vitthal !! |&nbsp;&nbsp;&nbsp;
+        * Welcome To Shri Vitthal Temple Online Services|&nbsp;&nbsp;&nbsp;
+        * Book Pooja|&nbsp;&nbsp;&nbsp;
+        * Donate|&nbsp;&nbsp;&nbsp;
+        *Darshan|&nbsp;&nbsp;&nbsp;
+        * Temple Events|&nbsp;&nbsp;&nbsp;
+        * !! Jai Shri Hari Vitthal !! |&nbsp;&nbsp;&nbsp;
+    </marquee>
+    <header>
+        <div class="logo-left">
+            <img src="https://vitthalrukminimandir.org/images/logo-bg.png">
+        </div>
+
+        <h1>Shri Vitthal Rukmini Mandir Samiti</h1>
+        <p>Online Services</p>
+        <div class="logo-right">
+            <img src="https://vitthalrukminimandir.org/images/logo-bg.png">
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Darshan &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="sparshadarshan.html">Sparsha Darshan</a></li>
+                    <li><a href="darshan.html">Mukha Darshan</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pooja &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tulasipooja.html">Tulasi Archan Pooja</a></li>
+                    <li><a href="abishekam.html">Abhishekam</a></li>
+                    <li><a href="#">Padya Pooja</a></li>
+                    <li><a href="#">Chandan Uti Pooja</a></li>
+                    <li><a href="#">Maha Nivedya</a></li>
+                </ul>
+            </li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="#">Accommodation</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+
+    <section class="instructions-section">
+
+        <h2>
+            Important Instructions
+        </h2>
+
+        <div class="language-option">
+
+            <label>
+                <input type="radio" name="lang" checked>
+                English
+            </label>
+
+            <label>
+                <input type="radio" name="lang">
+                Telugu
+            </label>
+
+        </div>
+        <ul class="instructions-list">
+
+            <li>
+                The darshan service is available free of cost by the committee.
+                Our objective is to save your time and provide you with the
+                best darshan experience.
+            </li>
+
+            <li>
+                The specified date and time on the pass must be strictly followed.
+            </li>
+
+            <li>
+                All details on the pass must be accurately filled in, and carrying
+                a valid ID proof is mandatory.
+            </li>
+
+            <li>
+                Mobile phones, electronic devices, and similar items are not
+                allowed inside the temple premises.
+            </li>
+
+            <li>
+                All rights related to the darshan pass are reserved by the
+                temple committee.
+            </li>
+
+        </ul>
+
+    </section>
+    <section class="darshan-section">
+
+        <h2>Darshan Details</h2>
+
+        <form class="darshan-form">
+            <div class="form-group">
+                <label>Darshan Date *</label>
+
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>No. Of Pilgrims *</label>
+                <select>
+                    <option>Select Number of Pilgrims</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>No. Of Children *</label>
+
+                <select>
+                    <option>Select Number of Children</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+        </form>
+    </section>
+    <!-- PRIMARY PILGRIM DETAILS -->
+
+    <section class="pilgrim-section">
+
+        <h2>Primary Pilgrim Details</h2>
+
+        <form class="pilgrim-form">
+
+            <!-- CHECKBOX -->
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    Use Primary Pilgrim details same as in my Profile.
+                </label>
+            </div>
+
+            <!-- FORM ROW -->
+
+            <div class="form-row">
+
+                <!-- NAME -->
+
+                <div class="form-group">
+                    <label>Primary Pilgrim Name *</label>
+
+                    <input type="text" placeholder="Enter Primary Pilgrim Name" maxlength="50">
+
+                    <small>Remaining Characters : 50</small>
+                </div>
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+                    <label>Mobile Number *</label>
+
+                    <div class="mobile-box">
+
+                        <select class="country-code">
+                            <option>+91</option>
+                            <option>+1</option>
+                            <option>+44</option>
+                        </select>
+
+                        <input type="tel" placeholder="Enter Mobile Number">
+
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                    <label>Email ID *</label>
+
+                    <input type="email" placeholder="Enter Email ID">
+                </div>
+
+            </div>
+
+            <!-- ADDRESS -->
+
+            <div class="form-group address-box">
+
+                <label>Address *</label>
+
+                <textarea rows="4" maxlength="200" placeholder="Enter Primary Pilgrim Address"></textarea>
+
+                <small>Remaining Characters : 200</small>
+
+            </div>
+
+            <!-- TERMS -->
+
+            <div class="terms-box">
+
+                <label>
+                    <input type="checkbox">
+
+                    I agree to
+                    <a href="#">Terms & Conditions</a>
+                    for booking Darshan.
+                </label>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="button-group">
+
+                <button type="reset" class="clear-btn">
+                    Clear
+                </button>
+
+                <button type="submit" class="submit-btn">
+                    Submit
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Copyright © 2025,
+            Shri Vitthal Rukmini Mandir Samiti,
+            Pandharpur.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Guidelines & FAQ's</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Feedback</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
