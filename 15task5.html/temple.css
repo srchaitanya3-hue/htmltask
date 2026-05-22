@@ -144,7 +144,7 @@ nav {
 .slides {
     display: flex;
     width: 300%;
-    animation: slide 12s infinite;
+    animation: scroll 12s infinite;
 }
 
 .slides img {
@@ -153,7 +153,7 @@ nav {
     object-fit: cover;
 }
 
-@keyframes slide {
+@keyframes scroll {
 
     0% {
         transform: translateX(0%);
@@ -182,7 +182,7 @@ nav {
 
 .login-box {
     flex: 1;
-    background: linear-gradient(to bottom, #005aa7, #003b73);
+    background: linear-gradient( #005aa7, #003b73);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -266,153 +266,448 @@ nav {
 }
 
 
-.about-pandharpur{
-    position:relative;
-    top:900px;
-    margin:60px;
-    background:white;
-    padding:50px;
-    border-radius:15px;
-    display:flex;
-    gap:40px;
-    align-items:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+.about-pandharpur {
+    position: relative;
+    top: 900px;
+    margin: 60px;
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.about-content{
-    flex:2;
+.about-content {
+    flex: 2;
 }
 
-.about-content h2{
-    font-size:42px;
-    color:#003f6b;
-    margin-bottom:25px;
-    border-bottom:3px solid #003f6b;
-    display:inline-block;
-    padding-bottom:10px;
+.about-content h2 {
+    font-size: 42px;
+    color: #003f6b;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #003f6b;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-.about-content p{
-    font-size:22px;
-    line-height:1.8;
-    margin-bottom:20px;
-    color:#333;
+.about-content p {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.about-image{
-    flex:1;
+.about-image {
+    flex: 1;
 }
 
-.about-image img{
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-section{
-    position:relative;
-    top:900px;
-    margin:60px;
-    background:white;
-    padding:50px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+.gallery-section {
+    position: relative;
+    top: 900px;
+    margin: 60px;
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-section h2{
-    text-align:center;
-    font-size:42px;
-    color:#003f6b;
-    margin-bottom:40px;
+.gallery-section h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #003f6b;
+    margin-bottom: 40px;
 }
 
-.gallery-slider{
-    width:100%;
-    overflow:hidden;
+.gallery-slider {
+    width: 100%;
+    overflow: hidden;
 }
 
-.gallery-track{
-    display:flex;
-    gap:20px;
-    width:max-content;
-    animation:scrollGallery 25s linear infinite;
+.gallery-track {
+    display: flex;
+    gap: 20px;
+    animation: slide 15s linear infinite;
 }
 
-.gallery-track img{
-    width:300px;
-    height:220px;
+.gallery-track img {
+    width: 300px;
+    height: 220px;
     object-fit:cover;
-    border-radius:15px;
-    transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-track img:hover{
-    transform:scale(1.05);
+.gallery-track img:hover {
+    transform: scale(1.05);
 }
 
-@keyframes scrollGallery{
+@keyframes slide {
 
-    0%{
-        transform:translateX(0);
+    0% {
+        transform: translateX(0);
     }
 
-    100%{
-        transform:translateX(-50%);
+    100% {
+        transform: translateX(-100%);
     }
 }
-.live-btn{
-      position:fixed;
-      right:25px;
-      bottom:30px;
-      background:red;
-      color:white;
-      text-decoration:none;
-      padding:14px 24px;
-      border-radius:50px;
-      font-size:18px;
-      font-weight:bold;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.3);
-      transition:0.3s ease;
-      z-index:999;
+
+.saints-section {
+    width: 70%;
+    margin-top: 1000px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.saints-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.saints-heading h1 {
+    font-size: 45px;
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+.saints-heading p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.saint-card {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.saint-card:hover {
+    transform: translateY(-8px);
+}
+
+.saint-image {
+    width: 280px;
+}
+
+.saint-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.saint-content {
+    flex: 1;
+}
+
+.saint-content h2 {
+    font-size: 34px;
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+.saint-content p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.live-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.live-btn:hover {
+    transform: scale(1.2);
+    background: #cc0000;
+}
+
+.live-dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
     }
 
-    .live-btn:hover{
-      transform:scale(1.2);
-      background:#cc0000;
-    }
-    .live-dot{
-      width:12px;
-      height:12px;
-      background:white;
-      border-radius:50%;
-      animation:blink 1s infinite;
+    50% {
+        opacity: 0.3;
     }
 
-    @keyframes blink{
-      0%{
-        opacity:1;
-      }
-
-      50%{
-        opacity:0.3;
-      }
-
-      100%{
-        opacity:1;
-      }
+    100% {
+        opacity: 1;
     }
+}
 
 footer {
-    position: relative;
-    top:900px;
-    background: #003f6b;
+    background: rgb(12, 27, 236);
     color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+@media (max-width:768px) {
+
+    marquee {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header {
+        top: 38px;
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .logo-left,
+    .logo-right {
+        width: 55px;
+        height: 55px;
+        top: 15px;
+    }
+
+    .logo-left {
+        left: 10px;
+    }
+
+    .logo-right {
+        right: 10px;
+    }
+
+    nav {
+        top: 145px;
+        overflow-x: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+        white-space: nowrap;
+    }
+
+    .menu li a {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+
+    .dropdown-menu {
+        min-width: 180px;
+    }
+
+    .hero {
+        position: relative;
+        top: 220px;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .slider {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slides img {
+        height: 250px;
+    }
+
+    .login-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .login-box input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .login-box button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .updates-section {
+        top: 250px;
+        flex-direction: column;
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .updates-content h2 {
+        font-size: 28px;
+    }
+
+    .updates-content ul li {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .updates-image img {
+        width: 120px;
+        margin-top: 20px;
+    }
+
+    .about-pandharpur {
+        top: 250px;
+        flex-direction: column;
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .gallery-section {
+        top: 250px;
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .gallery-section h2 {
+        font-size: 30px;
+    }
+
+    .gallery-track img {
+        width: 220px;
+        height: 160px;
+    }
+
+    .saints-section {
+        width: 90%;
+        margin: 300px auto 20px auto;
+    }
+
+    .saints-heading h1 {
+        font-size: 30px;
+    }
+
+    .saints-heading p {
+        font-size: 16px;
+    }
+
+    .saint-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .saint-image {
+        width: 100%;
+    }
+
+    .saint-image img {
+        height: auto;
+    }
+
+    .saint-content h2 {
+        font-size: 26px;
+    }
+
+    .saint-content p {
+        font-size: 16px;
+    }
+
+    .live-btn {
+        right: 15px;
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 15px;
+    }
+
 }

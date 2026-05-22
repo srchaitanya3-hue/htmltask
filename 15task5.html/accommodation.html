@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple Accommodation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f1e8;
+    color:#222;
+}
+
+header{
+    width:100%;
+    height:75vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://pbs.twimg.com/media/FzytKKAaAAAgbAN.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:800px;
+}
+
+.accommodation-section{
+    width:85%;
+    margin:80px auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:50px;
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    font-size:19px;
+    color:#555;
+    line-height:1.7;
+}
+
+.rooms-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.room-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.room-card:hover{
+    transform:translateY(-10px);
+}
+
+.room-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.room-content{
+    padding:25px;
+}
+
+.room-content h3{
+    font-size:32px;
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+.room-content p{
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.room-features{
+    margin-bottom:20px;
+}
+
+.room-features li{
+    list-style:none;
+    margin-bottom:10px;
+    color:#444;
+}
+
+.room-features li::before{
+    content:'🪔 ';
+}
+
+.book-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#8b0000;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#5e0000;
+}
+
+.facilities{
+    width:85%;
+    margin:80px auto;
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.facilities h2{
+    text-align:center;
+    font-size:45px;
+    color:#8b0000;
+    margin-bottom:40px;
+}
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.facility-box{
+    background:#f8f3eb;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.facility-box:hover{
+    transform:scale(1.05);
+}
+
+.facility-box h3{
+    font-size:26px;
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+.facility-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+@media(max-width:900px){
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+    }
+
+    .section-title h2,
+    .facilities h2{
+        font-size:35px;
+    }
+
+    .accommodation-section,
+    .facilities{
+        width:92%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+    <div class="hero-content">
+
+        <h1>Temple Accommodation</h1>
+
+        <p>
+            Peaceful and comfortable accommodation facilities for devotees visiting the sacred temple.
+        </p>
+
+    </div>
+
+</header>
+
+
+<section class="accommodation-section">
+
+    <div class="section-title">
+
+        <h2>Accommodation Services</h2>
+
+        <p>
+            Choose suitable accommodation facilities designed for devotees and pilgrims.
+        </p>
+
+    </div>
+
+
+    <div class="rooms-container">
+
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="room-content">
+
+                <h3>Locker Facility</h3>
+
+                <p>
+                    Safe and secure locker facility available for storing luggage and valuable belongings during temple darshan.
+                </p>
+
+                <ul class="room-features">
+                    <li>24/7 Security</li>
+                    <li>Safe Storage</li>
+                    <li>Affordable Charges</li>
+                </ul>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="room-content">
+
+                <h3>Single Room</h3>
+
+                <p>
+                    Comfortable single rooms with peaceful environment and essential facilities for individual devotees.
+                </p>
+
+                <ul class="room-features">
+                    <li>Attached Bathroom</li>
+                    <li>Comfortable Bed</li>
+                    <li>Clean Environment</li>
+                </ul>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="room-content">
+
+                <h3>Double Bedroom</h3>
+
+                <p>
+                    Spacious double bedroom accommodation specially designed for families and group pilgrims.
+                </p>
+
+                <ul class="room-features">
+                    <li>Family Friendly</li>
+                    <li>Modern Facilities</li>
+                    <li>Large Comfortable Space</li>
+                </ul>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="facilities">
+
+    <h2>Temple Facilities</h2>
+
+    <div class="facility-grid">
+
+        <div class="facility-box">
+
+            <h3>Free WiFi</h3>
+
+            <p>
+                Internet facility available for devotees inside accommodation areas.
+            </p>
+
+        </div>
+
+
+        <div class="facility-box">
+
+            <h3>Parking</h3>
+
+            <p>
+                Spacious vehicle parking area available for pilgrims and visitors.
+            </p>
+
+        </div>
+
+
+        <div class="facility-box">
+
+            <h3>24/7 Water</h3>
+
+            <p>
+                Continuous hot and cold water facility for all rooms and devotees.
+            </p>
+
+        </div>
+
+
+        <div class="facility-box">
+
+            <h3>Temple Shuttle</h3>
+
+            <p>
+                Easy transport facility from accommodation area to temple entrance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Temple Accommodation | Designed For Devotees
+    </p>
+
+</footer>
+
+</body>
+</html>
