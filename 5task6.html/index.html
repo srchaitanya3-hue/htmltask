@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="marks.css">
+</head>
+<body>
+    <div class="container">
+
+    <h2>Student Marks Calculator</h2>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="name">
+    </div>
+
+    <div class="form-group">
+        <label>Telugu</label>
+        <input type="number" id="sub1">
+    </div>
+
+    <div class="form-group">
+        <label>Hindi</label>
+        <input type="number" id="sub2">
+    </div>
+    <button onclick="calculateMarks()">Calculate</button>
+
+    <div class="result">
+        <p id="studentName"></p>
+        <p id="total"></p>
+        <p id="average"></p>
+        <p id="bonus"></p>
+        <p id="greater"></p>
+        <p id="equal"></p>
+        <p id="bothPassed"></p>
+        <p id="above90"></p>
+        <p id="inc"></p>
+        <p id="dec"></p>
+        <p id="result"></p>
+        <p id="grade"></p>
+    </div>
+</div> 
+<script src="mark.js"></script>
+
+</body>
+</html>
