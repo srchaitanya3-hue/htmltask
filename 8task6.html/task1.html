@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entry pass for pub</title>
+</head>
+<body>
+    <script>
+        let id=true;
+        let ticket=true;
+        let age=7;
+        if(id && ticket && age>=18){
+            console.log("Entry Allowed");
+        }
+        else{
+            console.log("Entry Denied");
+        }
+    </script>
+    <script>
+        let isid=true;
+        let isticket=false;
+        let isage=20;
+        if(isid || isticket || isage>=18){
+            console.log("Entry Allowed");
+        }
+        else{
+            console.log("Entry Denied");
+        }
+    </script>
+    <script>
+        let hasID = true;
+        let hasTicket = false;
+        let hasAge = 2;
+        if((hasID && hasTicket) || hasAge >= 18) {
+            console.log("Entry Allowed");
+        }
+        else{
+            console.log("Entry Denied");
+        }
+    </script>
+</body>
+</html>

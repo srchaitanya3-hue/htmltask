@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isWeekend = true;
+        let isHoliday = true;
+        let isLeaveApproved = true;
+        if (isWeekend && isHoliday && isLeaveApproved) {
+            console.log("is weekend");
+        }
+        else {
+            console.log("Work");
+        }
+    </script>
+    <script>
+        let hasWeekend = true;
+        let hasHoliday = false;
+        let hasLeaveApproved = true;
+        if (hasWeekend || hasHoliday || hasLeaveApproved) {
+            console.log("is weekend");
+        }
+        else {
+            console.log("Work");
+        }
+    </script>
+    <script>
+    let asWeekend = true;
+    let asHoliday = false;
+    let leaveApproved = true;
+    if((asWeekend && asHoliday) || leaveApproved) {
+        console.log("Leave Approved")
+    }
+    else{
+        console.log("Working Day")
+    }
+</script>
+
+</body>
+</html>
