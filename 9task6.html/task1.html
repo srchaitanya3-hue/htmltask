@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <script>
+        // tasks1
+        let students = ["Ravi", "Priya", "Kiran", "Anu"];
+        for (let student of students) {
+            document.write("Attendance Marked for: " + student + "<br>");
+        }
+        //task2
+        let products = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+        for (let product of products) {
+            document.write("Available Product: " + product + "<br>");
+        }
+        //task3
+        let employees = ["John", "David", "Sara"];
+        for (let employee of employees) {
+            document.write("Employee Name: " + employee + "<br>");
+        }
+        //task4
+        for (let i = 10; i >= 1; i--) {
+            document.write("seat" + i + " is booked" + "<br>");
+        }
+        //task5
+        let orders = ["Order101", "Order102", "Order103"];
+        for (let order of orders) {
+            document.write("Delivering Order: " + order + "<br>");
+        }
+        //task6
+        let contacts = ["Rahul", "Priya", "Arjun", "Neha"];
+        for (let contact of contacts) {
+            document.write("calling: " + contact + "<br>");
+        }
+        //task7
+        let users = ["Ravi", "Kiran", "Anu"];
+        for (let user of users) {
+            document.write("Message Sent to: " + user + "<br>");
+        }
+        //task8
+        let videos = ["HTML Basics", "CSS Basics", "JavaScript Basics"];
+        for (let video of videos) {
+            document.write("Watching: " + video + "<br>");
+        }
+        //task9
+        let balance = 1000;
+        while (balance > 0) {
+            document.write("Current Balance: " + balance + "<br>");
+            balance -= 200;
+        }
+        //task10
+        for (let stop = 1; stop <= 5; stop++) {
+            document.write("reached stop " + stop + "<br>");
+        }
+        //task11
+        let resultstudents = ["Ravi", "Priya", "Kiran", "Anu"];
+        for (let resultstudent of resultstudents) {
+            document.write("Result cheacking result for: " + resultstudent + "<br>");
+        }
+        document.write("All results published successfully. <br>");
+        //task12
+        for (let rollNo = 1; rollNo <= 20; rollNo++) {
+
+            if (rollNo % 2 === 0) {
+                document.write("Student " + rollNo + " - Even Roll Number" + "<br>");
+            } else {
+                document.write("Student " + rollNo + " - Odd Roll Number" + "<br>");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
