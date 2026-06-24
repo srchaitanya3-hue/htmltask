@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pizza Order Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f9e7c4;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            gap: 50px;
+            justify-content: space-between;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .left {
+            width: 55%;
+        }
+
+        .right {
+            width: 35%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sizes {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .size-btn {
+            padding: 10px 25px;
+            border: 1px solid #333;
+            cursor: pointer;
+            background: white;
+        }
+
+        .active {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .toppings {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .receipt {
+            border: 2px dashed gray;
+            padding: 20px;
+        }
+
+        .receipt h2 {
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .total {
+            font-size: 35px;
+            font-weight: bold;
+            color: navy;
+        }
+
+        button {
+            margin-top: 20px;
+            background: green;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <h1>🍕 BUILD YOUR SMART PIZZA</h1>
+
+            <label>CRUST</label>
+
+            <select id="crust">
+                <option value="thin">Thin ($8)</option>
+                <option value="regular">Regular ($10)</option>
+                <option value="stuffed">Stuffed ($12)</option>
+            </select>
+
+            <label>SIZE</label>
+
+            <div class="sizes">
+                <button class="size-btn" onclick="selectSize('small',this)">Small</button>
+                <button class="size-btn active" onclick="selectSize('medium',this)">Medium</button>
+                <button class="size-btn" onclick="selectSize('large',this)">Large</button>
+            </div>
+
+            <h3>TOPPINGS</h3>
+
+            <div class="toppings">
+                <label><input type="checkbox" value="cheese"> Cheese</label>
+                <label><input type="checkbox" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" value="mushrooms"> Mushrooms</label>
+                <label><input type="checkbox" value="onions"> Onions</label>
+                <label><input type="checkbox" value="peppers"> Peppers</label>
+                <label><input type="checkbox" value="chicken"> Chicken</label>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="receipt">
+
+                <h2>YOUR RECEIPT</h2>
+
+                <div class="row">
+                    <span>Base:</span>
+                    <span id="basePrice">$0</span>
+                </div>
+
+                <div class="row">
+                    <span>Toppings:</span>
+                    <span id="toppingPrice">$0</span>
+                </div>
+
+                <div class="row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0</span>
+                </div>
+
+                <div class="row">
+                    <span>Discount:</span>
+                    <span>10% (SAVE10)</span>
+                </div>
+
+                <hr><br>
+
+                <div class="row">
+                    <span>FINAL TOTAL</span>
+                    <span class="total" id="finalTotal">$0</span>
+                </div>
+
+                <button onclick="placeOrder()">PLACE ORDER</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Data Storage
+
+        const MENU = {
+
+            size: {
+                thin: 8,
+                regular: 10,
+                stuffed: 12
+            },
+
+            length: {
+                small: 1,
+                medium: 1.5,
+                large: 2
+            },
+
+            toppings: {
+                cheese: 1,
+                pepperoni: 1,
+                mushrooms: 1,
+                onions: 1,
+                peppers: 1,
+                chicken: 2
+            }
+
+        };
+
+        let selectedSize = "medium";
+
+        // Pure Logic
+
+        const calculatePrice = (size, length) => {
+
+            const sizePrice =
+                MENU.size[size] || MENU.size.regular;
+
+            const lengthPrice =
+                MENU.length[length] || MENU.length.medium;
+
+            return sizePrice * lengthPrice;
+        };
+
+        const calculateToppingsPrice = (toppings) => {
+
+            return toppings.reduce((total, topping) => {
+
+                return total + MENU.toppings[topping];
+
+            }, 0);
+        };
+
+        const calculateTotalPrice =
+            (calculatePrice, calculateToppingsPrice) => {
+
+                return (size, length, toppings) => {
+
+                    const basePrice =
+                        calculatePrice(size, length);
+
+                    const toppingPrice =
+                        calculateToppingsPrice(toppings);
+
+                    return {
+                        basePrice,
+                        toppingPrice,
+                        subtotal: basePrice + toppingPrice
+                    };
+                };
+            };
+
+        const totalCalculator =
+            calculateTotalPrice(
+                calculatePrice,
+                calculateToppingsPrice
+            );
+
+        // UI Functions
+
+        function selectSize(size, btn) {
+
+            selectedSize = size;
+
+            document
+                .querySelectorAll(".size-btn")
+                .forEach(button =>
+                    button.classList.remove("active"));
+
+            btn.classList.add("active");
+
+            updateReceipt();
+        }
+
+        function updateReceipt() {
+
+            const crust =
+                document.getElementById("crust").value;
+
+            const toppings =
+                [...document.querySelectorAll(
+                    'input[type="checkbox"]:checked')]
+                    .map(item => item.value);
+
+            const result =
+                totalCalculator(
+                    crust,
+                    selectedSize,
+                    toppings
+                );
+
+            let discount =
+                result.subtotal * 0.10;
+
+            let finalTotal =
+                result.subtotal - discount;
+
+            document.getElementById(
+                "basePrice").innerText =
+                "$" + result.basePrice.toFixed(2);
+
+            document.getElementById(
+                "toppingPrice").innerText =
+                "$" + result.toppingPrice.toFixed(2);
+
+            document.getElementById(
+                "subtotal").innerText =
+                "$" + result.subtotal.toFixed(2);
+
+            document.getElementById(
+                "finalTotal").innerText =
+                "$" + finalTotal.toFixed(2);
+        }
+
+        function placeOrder() {
+
+            alert(
+                "🍕 Order Placed Successfully!"
+            );
+        }
+
+        document
+            .getElementById("crust")
+            .addEventListener(
+                "change",
+                updateReceipt
+            );
+
+        document
+            .querySelectorAll(
+                'input[type="checkbox"]')
+            .forEach(item => {
+
+                item.addEventListener(
+                    "change",
+                    updateReceipt
+                );
+
+            });
+
+        updateReceipt();
+
+    </script>
+
+</body>
+
+</html>
