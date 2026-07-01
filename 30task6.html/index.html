@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz App</title>
+
+    <link rel="stylesheet" href="quiz.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+
+        <div class="icon">
+            <i class="fa-solid fa-circle-question"></i>
+        </div>
+
+        <h1>Welcome to the <br> JavaScript Quiz!</h1>
+
+        <p>
+            Test your JavaScript knowledge with
+            <br>
+            10 multiple choice questions.
+        </p>
+
+        <div class="features">
+
+            <div class="feature-box">
+                <i class="fa-solid fa-list"></i>
+                <h3>10</h3>
+                <span>Questions</span>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-regular fa-clock"></i>
+                <h3>Multiple</h3>
+                <span>Choice</span>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Test Your</h3>
+                <span>Knowledge</span>
+            </div>
+
+        </div>
+
+        <button id="start-btn" class="btn">
+            Start Quiz
+        </button>
+
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+
+        <div class="top-bar">
+
+            <div id="question-number">
+                Question 1 of 10
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+        </div>
+
+        <div class="question-card">
+
+            <h2 id="question">
+                Question goes here
+            </h2>
+
+            <div id="options" class="options">
+
+                <!-- Options generated using JavaScript -->
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="prev-btn" class="btn">
+                Previous
+            </button>
+
+            <button id="next-btn" class="btn">
+                Next
+            </button>
+
+            <button id="submit-btn" class="btn submit-btn">
+                Submit Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+
+        <div class="result-icon">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+
+        <h1>Quiz Completed!</h1>
+
+        <p id="performance">
+            Great Job!
+        </p>
+
+        <div class="score-circle">
+            <h2 id="percentage">0%</h2>
+            <span>Your Score</span>
+        </div>
+
+        <div class="result-box">
+
+            <div class="box correct">
+                <h2 id="correct">0</h2>
+                <p>Correct</p>
+            </div>
+
+            <div class="box wrong">
+                <h2 id="wrong">0</h2>
+                <p>Wrong</p>
+            </div>
+
+            <div class="box total">
+                <h2 id="total">10</h2>
+                <p>Total</p>
+            </div>
+
+        </div>
+
+        <button id="restart-btn" class="btn restart-btn">
+            Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
